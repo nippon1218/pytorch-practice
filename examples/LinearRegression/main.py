@@ -17,6 +17,7 @@ class LinearRegressionModel(nn.Module):
 # 生成一些假数据：y = 2x + 1
 # x 是输入，y 是目标输出
 x_train = torch.randn(100, 1)  # 100 个样本，1 个特征
+print(x_train)
 y_train = 2 * x_train + 1  # 线性关系：y = 2x + 1
 
 # 将数据移到 GPU（如果可用）
@@ -29,7 +30,7 @@ criterion = nn.MSELoss()  # 均方误差损失函数
 optimizer = optim.SGD(model.parameters(), lr=0.01)  # 随机梯度下降优化器
 
 # 训练模型
-epochs = 100
+epochs = 200
 for epoch in range(epochs):
     model.train()  # 设置模型为训练模式
 
